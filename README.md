@@ -1,39 +1,34 @@
 # Angular QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
-
-It's been extended with testing support so you can start writing tests immediately.
+This repo was created using the [https://github.com/angular/quickstart](https://github.com/angular/quickstart).
+Check their README for more information about getting started with [angular](https://angular.io/docs/ts/latest/quickstart.html).
 
 **This is not the perfect arrangement for your application. It is not designed for production.
 It exists primarily to get you started quickly with learning and prototyping in Angular**
 
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
-
 ## Prerequisites
 
-Node.js and npm are essential to Angular development. 
-    
+Node.js and npm are essential to Angular development.
+
 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
 Get it now</a> if it's not already installed on your machine.
- 
+
 **Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
 
 We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
 
-## Create a new project based on the QuickStart
+##Clone this repo
 
-Clone this repo into new project folder (e.g., `my-proj`).
+
+Clone this repo into a new project folder (e.g., `~/ng2forms`).
 ```bash
-git clone  https://github.com/angular/quickstart  my-proj
-cd my-proj
+git clone  https://github.com/dvidsilva/ng2forms  ~/ng2forms
+cd ~/ng2forms
 ```
 
-We have no intention of updating the source on `angular/quickstart`.
+We have no intention of updating the source.
 Discard everything "git-like" by deleting the `.git` folder.
 ```bash
 rm -rf .git  # non-Windows
@@ -53,11 +48,12 @@ git commit -m "Initial commit"
 
 Create a *remote repository* for this project on the service of your choice.
 
-Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
+Grab its address (e.g. *`https://github.com/<my-org>/<name>.git`*) and push the *local repo* to the *remote*.
 ```bash
 git remote add origin <repo-address>
 git push -u origin master
 ```
+
 ## Install npm packages
 
 > See npm and nvm version notes above
@@ -69,7 +65,7 @@ npm install
 npm start
 ```
 
-The `npm start` command first compiles the application, 
+The `npm start` command first compiles the application,
 then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
@@ -121,25 +117,3 @@ We can update our app and our tests in real-time, keeping a weather eye on the c
 Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (`Ctrl-C`) and
 restart it. No worries; it's pretty quick.
 
-### End-to-end (E2E) Tests
-
-E2E tests are in the `e2e` directory, side by side with the `app` folder.
-Their filenames must end in `.e2e-spec.ts`.
-
-Look for the example `e2e/app.e2e-spec.ts`.
-Add more `.e2e-spec.js` files as you wish (although one usually suffices for small projects);
-we configured protractor to find them.
-
-Thereafter, run them with `npm run e2e`.
-
-That command first compiles, then simultaneously starts the Http-Server at `localhost:8080`
-and launches protractor.  
-
-The pass/fail test results appear at the bottom of the terminal window.
-A custom reporter (see `protractor.config.js`) generates a  `./_test-output/protractor-results.txt` file
-which is easier to read; this file is excluded from source control.
-
-Shut it down manually with `Ctrl-C`.
-
-[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/angular/quickstart
