@@ -3,7 +3,8 @@
 This repo was created using the [https://github.com/angular/quickstart](https://github.com/angular/quickstart).
 Check their README for more information about getting started with [angular](https://angular.io/docs/ts/latest/quickstart.html).
 
-**This is not the perfect arrangement for your application. It is not designed for production.
+**This is not the perfect arrangement for your application. It is not designed for production, 
+because it prefers compilation speed over performance. 
 It exists primarily to get you started quickly with learning and prototyping in Angular**
 
 ## Prerequisites
@@ -117,3 +118,29 @@ We can update our app and our tests in real-time, keeping a weather eye on the c
 Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (`Ctrl-C`) and
 restart it. No worries; it's pretty quick.
 
+## TypeScript
+
+We will be using [TypeScript](https://www.typescriptlang.org/) for the workshop, and is the preferred
+tool when developing Angular2 applications. 
+
+Altough it is very similar to JavaScript and it should be 
+easy to get it, we recommend looking at their [getting started guide](https://www.typescriptlang.org/docs/tutorial.html)
+before the workshop.
+
+### VsCode
+
+I use [Visual Studio Code](https://code.visualstudio.com/docs/?dv=osx),
+because it comes already with TypeScript integrations, code completion, syntax, etc. Is a a very good tool,
+but obviously any code editor that you're comfortable with works for this. I'd recommend installing TypeScript
+syntax checker plugins for your editor.
+
+### .ts files
+
+The source files that we will be modifying are `.ts`, the folders have some `.js` and `.map` files, those are compiled
+from the TypeScript files, avoid making changes there since the watcher will overwrite them and you might lose the changes.
+
+### Using JavaScript instead
+
+It is possible to use Angular2 without TypeScript, but it is not in the scope of this class,
+if you'd like to learn more about it, take a look at the guide for
+[getting started with Angular2 with JavaScript](https://angular.io/docs/js/latest/quickstart.html).
