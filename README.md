@@ -1,7 +1,7 @@
-# Angular QuickStart Source
+# Angular2 Forms Workshop
 
-This repo was created using the [https://github.com/angular/quickstart](https://github.com/angular/quickstart).
-Check their README for more information about getting started with [angular](https://angular.io/docs/ts/latest/quickstart.html).
+This repo was created using the [https://github.com/angular/quickstart](https://github.com/angular/quickstart) as a base.
+Check the [Angular](https://angular.io/docs/ts/latest/quickstart.html) website for more information about getting started.
 
 **This is not the perfect arrangement for your application. It is not designed for production, 
 because it prefers compilation speed over performance. 
