@@ -7,6 +7,12 @@ Check the [Angular](https://angular.io/docs/ts/latest/quickstart.html) website f
 because it prefers compilation speed over performance. 
 It exists primarily to get you started quickly with learning and prototyping in Angular**
 
+## Preparation
+
+Idetally, clone this repo and install the packages and requirements necesary, and verify that it runs properly
+before arriving to the workshop. There will be several attendees trying to perform requests
+at the same time and it might be much slower to download at the venue.
+
 ## Prerequisites
 
 Node.js and npm are essential to Angular development.
@@ -20,7 +26,7 @@ Older versions produce errors.
 
 We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
 
-##Clone this repo
+## Clone this repo
 
 
 Clone this repo into a new project folder (e.g., `~/ng2forms`).
@@ -144,3 +150,26 @@ from the TypeScript files, avoid making changes there since the watcher will ove
 It is possible to use Angular2 without TypeScript, but it is not in the scope of this class,
 if you'd like to learn more about it, take a look at the guide for
 [getting started with Angular2 with JavaScript](https://angular.io/docs/js/latest/quickstart.html).
+
+## What's included
+
+This repo has an example Angular2 application with extra elements not included in the quickstart. It can be
+used to acquire familiarity with the concepts of Angular2.
+
+A router is included, with some routes that match to components, and the `<router-outlet>` where it will be displayed.
+The routes here are defined in the file `app/app.module.ts`.
+
+For more information about routing, consult the [documentation](https://angular.io/docs/ts/latest/guide/router.html). 
+
+We included the components that we will need for the workshop, most of them will be empty and you will be writing
+on those files, except for the `app/home/home.component.ts`, we included some property and event bindings there that
+you can use as reference. 
+
+For more information about templates and bindings look at the [documenation](https://angular.io/docs/ts/latest/guide/template-syntax.html).
+
+And, here's a link to the [documentation about forms](https://angular.io/docs/ts/latest/guide/forms.html) in Angular2 for reference.
+
+## Cheatsheet
+
+To facilitate following the workshop we added a [cheat sheet](https://github.com/dvidsilva/ng2forms/blob/master/cheatseet.md) that you
+can use as reference if you need to look at after or if you need to copy paste code to make sure it works, or compare what you typed.
