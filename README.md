@@ -72,6 +72,8 @@ npm install
 npm start
 ```
 
+You can replace `npm install` with yarn if you prefer, a `yarn.lock` file is included.
+
 The `npm start` command first compiles the application,
 then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
