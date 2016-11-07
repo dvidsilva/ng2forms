@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 // http://stackoverflow.com/questions/39965524/angular2-material-design-alpha-9-3-has-404-not-found-for-angular-material
 import { MaterialModule } from '@angular/material';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { HomeComponent }  from './home/home.component';
@@ -15,6 +15,7 @@ import {ReactiveFormComponent} from './forms/reactive-forms.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
