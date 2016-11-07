@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,15 +6,21 @@ import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Valida
     styleUrls: [`./app/forms/forms.css`]
 })
 
-export class ReactiveFormComponent  {
-    form = {};
+export class ReactiveFormComponent implements OnInit {
 
-    submitted = false;
-
-    sizes = ['S', 'M', 'L', 'XL'];
+    public form: FormGroup; // our model driven form
+    public submitted: boolean; // keep track on whether form is submitted
+    public sizes: Array<String> = ['S', 'M', 'L', 'XL'];
 
     submit ($event: any) {
         $event.preventDefault();
         this.submitted = true;
     }
+
+    ngOnInit() {
+        this.form = new FormGroup({
+            name: new FormControl('', []),
+        });
+    }
+
 }
