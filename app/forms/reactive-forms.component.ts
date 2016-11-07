@@ -12,15 +12,21 @@ export class ReactiveFormComponent implements OnInit {
     public submitted: boolean; // keep track on whether form is submitted
     public sizes: Array<String> = ['S', 'M', 'L', 'XL'];
 
+    constructor(public _fb: FormBuilder) {
+      this.form = this._fb.group({
+        name: ''
+      });
+    }
+
     submit ($event: any) {
         $event.preventDefault();
         this.submitted = true;
     }
 
     ngOnInit() {
-        this.form = new FormGroup({
-            name: new FormControl('', []),
-        });
+        // this.form = new FormGroup({
+        //     name: new FormControl('', []),
+        // });
     }
 
 }
