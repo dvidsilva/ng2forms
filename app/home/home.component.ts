@@ -11,6 +11,10 @@ import { Component } from '@angular/core';
         <p><button (click)="showAlert()">Click here to see an alert</button></p>
         <p><strong>This is a two way data binding with ngModel:</strong>
         <input [(ngModel)]="welcome_message" ></p>
+        <p>
+            <label> Local variable: {{phone_number}}</label>
+            <input #phone placeholder="local variable" (change)="setLocalVariable(phone.value)" (keyup)="setLocalVariable(phone.value)">
+       </p>
     </section>`,
     styles: [`
     input {
@@ -22,8 +26,13 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent { 
   welcome_message = 'Welcome to NG2Forms Workshop';
+  phone_number  = ``;
 
   showAlert() {
     alert(this.welcome_message);
+  }
+
+  setLocalVariable(val: string) {
+      this.phone_number = val;
   }
 }
