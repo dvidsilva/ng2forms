@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NG_VALIDATORS, AbstractControl} from '@angular/forms';
 
 @Component({
     templateUrl: './app/forms/template-driven.tpl.html',
