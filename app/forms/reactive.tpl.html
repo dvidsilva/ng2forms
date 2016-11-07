@@ -25,8 +25,14 @@
                     <option *ngFor="let p of sizes" [value]="p">{{p}}</option>
                 </select>
             </div>
+            <md-card class="address">
+                <label for="street">Address</label>
+                <input type="text" placeholder="Street address">
+                <label for="city">City</label>
+                <input type="text" placeholder="City">
+            </md-card>
             <div>
-                <button (click)="submit($event)">Submit</button>
+                <button md-button (click)="submit($event)">Submit</button>
             </div>
     </form>
     <div  class="left-column">
