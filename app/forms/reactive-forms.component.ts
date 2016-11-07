@@ -1,9 +1,19 @@
 import {Component} from '@angular/core';
 
 @Component({
-    template : `<form>
-        <h2>Reactive form will go here</h2>
-    </form>`
- })
+    templateUrl : `./app/forms/reactive.tpl.html`,
+    styleUrls: [`./app/forms/forms.css`]
+})
 
-export class ReactiveFormComponent  {}
+export class ReactiveFormComponent  {
+    form = {};
+
+    submitted = false;
+
+    sizes = ['S', 'M', 'L', 'XL'];
+
+    submit ($event: any) {
+        $event.preventDefault();
+        this.submitted = true;
+    }
+}

@@ -1,0 +1,50 @@
+<section>
+    <form novalidate class="right-column">
+            <h2>Reactive form will go here</h2>
+            <p><strong>Reactive Form</strong></p>
+            <div>
+                <label for="name">Name:</label>
+                <input name="name" type="text">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input name="email" type="text">
+            </div>                
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input name="phone" type="text">
+            </div>   
+            <div>
+                <label for="agreement">Do you agree?</label>
+                <input name="agreement" type="radio" value="1"> Yes
+                <input name="agreement" type="radio" value="0"> No
+            </div>
+            <div>
+                <label for="size">What's your t-shirt size?</label>
+                <select name="size">
+                    <option *ngFor="let p of sizes" [value]="p">{{p}}</option>
+                </select>
+            </div>
+            <div>
+                <button (click)="submit($event)">Submit</button>
+            </div>
+    </form>
+    <div  class="left-column">
+        <p><strong>Debug</strong></p>
+        <p><strong>Form Values:</strong></p>
+        <p>
+            {{form.value | json}}</p>
+        <p>
+            <strong>Form validity:</strong>
+            {{form.valid | json}}
+        </p>
+        <p> 
+            <strong>Form pristine?</strong>
+            {{form.pristine | json}}
+        </p>
+        <p>
+            <strong>Form submitted?</strong>
+            {{submitted | json}}
+        </p>
+    </div>
+</section>

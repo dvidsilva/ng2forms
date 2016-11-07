@@ -1,10 +1,19 @@
 import {Component} from '@angular/core';
 
 @Component({
-    template : `<form>
-        <h2>Template form will go here</h2>
-        <p><strong>Ng1 Form style</strong></p>
-    </form>`
+    templateUrl: './app/forms/template-driven.tpl.html',
+    styleUrls: [`./app/forms/forms.css`]
  })
 
-export class TemplateFormComponent  {}
+export class TemplateFormComponent  {
+    submitted = false;
+
+    sizes = ['S', 'M', 'L', 'XL'];
+
+    form = {};
+
+    submit ($event: any) {
+        $event.preventDefault();
+        this.submitted = true;
+    }
+}
