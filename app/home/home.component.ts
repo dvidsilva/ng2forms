@@ -10,11 +10,16 @@ import { Component } from '@angular/core';
         <!--<p>A live version of this project maybe is found in 
             <a href="https://dvidsilva.github.io/ng2forms">dvidsilva.github.io/ng2forms</a></p>-->
         <p><button md-raised-button (click)="showAlert()">Click here to see an alert</button></p>
-        <p><strong>This is a two way data binding with ngModel:</strong>
-        <input [(ngModel)]="welcome_message" ></p>
+        <p><strong>This is a two way data binding with ngModel:</strong></p>
+        <p>
+            <md-input [(ngModel)]="welcome_message" placeholder="Welcome Message"></md-input>
+        </p>
         <p>
             <label> Local variable: {{phone_number}}</label>
-            <input #phone placeholder="local variable" (change)="setLocalVariable(phone.value)" (keyup)="setLocalVariable(phone.value)">
+       </p>
+       <p>
+           <md-input #phone placeholder="local" (change)="setLocalVariable(phone.value)" (keyup)="setLocalVariable(phone.value)">
+           </md-input>
        </p>
        </md-card>
     </section>`,
