@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NG_VALIDATORS, AbstractControl} from '@angular/forms';
+import { Component, Directive } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
 
 @Component({
     templateUrl: './app/forms/template-driven.tpl.html',

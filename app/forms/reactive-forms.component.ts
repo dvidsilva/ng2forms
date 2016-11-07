@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NG_VALIDATORS, AbstractControl} from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     templateUrl : `./app/forms/reactive.tpl.html`,
