@@ -4,8 +4,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, Validators} from
 @Component({
     selector: 'increase-input',
     template: `<div>
-        <button (click)="increase()"> {{counter}} </button>
-        <input [(ngModel)]="counter"> 
+        <button md-button (click)="increase()"> {{counter}} </button>
      </div>`,
     providers: [
            {provide: NG_VALUE_ACCESSOR, multi: true, useExisting: IncreaseInput}

@@ -24,6 +24,7 @@ export class ReactiveFormComponent implements OnInit {
         username: [''],
         email: ['', Validators.required],
         sizes: '',
+        counter: '',
         addresses: this._fb.array([
             this._fb.group({
                 street: ['123 fake st', Validators.required],
