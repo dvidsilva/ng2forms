@@ -5,11 +5,12 @@ import { RouterModule }   from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
 import { AppComponent }  from './app.component';
 import { HomeComponent }  from './home/home.component';
-import {TemplateFormComponent} from './forms/template-forms.component';
+import {TemplateFormComponent, EmailDiffToUsername} from './forms/template-forms.component';
 import {ReactiveFormComponent} from './forms/reactive-forms.component';
-
+import {IncreaseInput} from './increaseinput/increase.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,9 @@ import {ReactiveFormComponent} from './forms/reactive-forms.component';
     AppComponent,
     HomeComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    EmailDiffToUsername,
+    IncreaseInput
   ],
   bootstrap:    [ AppComponent ]
 })

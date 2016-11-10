@@ -1,15 +1,20 @@
 <section>
-    <form novalidate class="right-column">
+    <form novalidate class="right-column" #f="ngForm">
             <h2>Template form will go here</h2>
             <p><strong>Template-driven Forms</strong></p>
             <div>
-                <label for="name">Name:</label>
-                <input name="name" type="text">
+                <increase-input name="countercontro" ngModel="countercontrol"></increase-input>
             </div>
             <div>
-                <label for="email">Email:</label>
-                <input name="email" type="text">
-            </div>                
+                <div  #user="ngModelGroup" ngModelGroup="user" email-username-matcher>
+                    <label for="name">Name:</label>
+                    <input name="username" type="text" [ngModel]="username">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input name="email" type="text" [ngModel]="email">
+                </div>
+           </div>                
             <div>
                 <label for="phone">Phone Number:</label>
                 <input name="phone" type="text">
@@ -26,21 +31,21 @@
                 </select>
             </div>
             <div>
-                <button (click)="submit($event)">Submit</button>
+                <button (click)="submit(f.value)">Submit</button>
             </div>
     </form>
     <div  class="left-column">
         <p><strong>Debug</strong></p>
         <p><strong>Form Values:</strong></p>
         <p>
-            {{form.value | json}}</p>
+            {{f.value | json}}</p>
         <p>
             <strong>Form validity:</strong>
-            {{form.valid | json}}
+            {{f.valid | json}}
         </p>
         <p> 
             <strong>Form pristine?</strong>
-            {{form.pristine | json}}
+            {{f.pristine | json}}
         </p>
         <p>
             <strong>Form submitted?</strong>

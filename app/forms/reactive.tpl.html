@@ -4,12 +4,17 @@
             <p><strong>Reactive Form</strong></p>
             <div>
                 <label for="name" >Name:</label>
-                <input name="name" formControlName="name" type="text">
+                <input name="name" formControlName="username" type="text">
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input name="email" type="text">
+                <input name="email" type="text" formControlName="email">
             </div>                
+            <div>
+                <p><strong *ngIf="form.errors !== null && form.errors.empty_username">
+                    {{form.errors.empty_username}}
+                    </strong></p>
+            </div>
             <div>
                 <label for="phone">Phone Number:</label>
                 <input name="phone" type="text">
@@ -21,16 +26,22 @@
             </div>
             <div>
                 <label for="size">What's your t-shirt size?</label>
-                <select name="size">
+                <select name="size" formControlName="sizes" >
                     <option *ngFor="let p of sizes" [value]="p">{{p}}</option>
                 </select>
             </div>
-            <md-card class="address">
-                <label for="street">Address</label>
-                <input type="text" placeholder="Street address">
-                <label for="city">City</label>
-                <input type="text" placeholder="City">
-            </md-card>
+            <div formArrayName="addresses">
+                <md-card class="address"  *ngFor="let address of form.controls.addresses.controls; let i=index">
+                    <span>Address {{i + 1}}</span>
+                    <div [formGroupName]="i">
+                        <label for="street">Address</label>
+                        <input type="text" formControlName="street" placeholder="Street address">
+                        <label for="city">City</label>
+                        <input type="text" placeholder="City">
+                    </div>
+                </md-card>
+            </div>
+            <button (click)="addAddress()">Add Address</button>
             <div>
                 <button md-button (click)="submit($event)">Submit</button>
             </div>
